@@ -6,9 +6,18 @@ $checkedColor: #64bd63;
   padding:0;
 }
 html,body{
-  height: 100%;
-  background-image:url(../images/bg.png);
   color:white;
+  .back{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
 }
 .container{
   position:relative;
@@ -17,7 +26,8 @@ html,body{
   left:15%;
   top:5%;
   padding-top:1px;
-  background-image:url(../images/rect.png);
+  background-color:#07152b;
+  background-size:100%100%;
   .head{
     margin:2% auto 10px 14%;
     font-size:2.2em;

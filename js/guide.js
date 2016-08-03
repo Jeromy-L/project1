@@ -1,10 +1,18 @@
 $("body").css("height",window.screen.height);
+$("body").css("width",window.screen.width);
+
+//loading动画隐藏
+$("#floatingBarsG").css("visibility","hidden");
+
+//获取屏幕的宽度和高度并设置在内容上
 var warpperWidth = window.screen.width;
 var warpperHeight = window.screen.height;
 $(".warpper").css("width",warpperWidth);
 $(".warpper").css("height",warpperHeight);
 $(".content").css("width",warpperWidth);
 $(".content").css("height",warpperHeight);
+$(".back").css("width",warpperWidth);
+$(".back").css("height",warpperHeight);
 function buttonHover(){
 	var hoverTop = $(".coocaa_button_hover").offset().top;
 	var hoverLeft = $(".coocaa_button_hover").offset().left;

@@ -3,9 +3,15 @@
   padding: 0; }
 
 html, body {
-  height: 100%;
-  background-image: url(../images/bg.png);
   color: white; }
+  html .back, body .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1; }
+    html .back img, body .back img {
+      width: 100%;
+      height: 100%; }
 
 #text {
   position: absolute;
@@ -21,7 +27,8 @@ html, body {
   top: 15%;
   left: 20%;
   padding-top: 1px;
-  background-image: url(../images/rect.png); }
+  background-color: #07152b;
+  background-size: 100% 100%; }
   .container .progress {
     display: block;
     overflow: hidden;

@@ -1,4 +1,9 @@
 $("body").css("height",window.screen.height);
+$("body").css("width",window.screen.width);
+
+//loading动画隐藏
+$("#floatingBarsG").css("visibility","hidden");
+
 //获取屏幕的宽度和高度并设置在内容上
 var warpperWidth = window.screen.width;
 var warpperHeight = window.screen.height;
@@ -6,6 +11,9 @@ $(".warpper").css("width",warpperWidth);
 $(".warpper").css("height",warpperHeight);
 $(".content").css("width",warpperWidth);
 $(".content").css("height",warpperHeight);
+$(".back").css("width",warpperWidth);
+$(".back").css("height",warpperHeight);
+
 // 覆盖的方框函数，由.coocaa_button_hover来确定聚焦的位置
 //再获取它的位置大小并设置在.button_hover样式上，移除只读属性并聚焦。
 function buttonHover(){
