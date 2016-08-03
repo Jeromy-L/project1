@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://box.coocaa.com/ -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale= 1.0">
+	<title>完成设置向导</title>
+	<!-- 自己的css/scss文件 -->
+	<link href="../style/success.css" rel="stylesheet">
+	<!-- 共有的css文件 -->
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<!-- 引入的js库 -->
+	<script src="../lib/jquery.min.js"></script>
+	<script src="../lib/coocaamap-1.1.js"></script>
+	<!-- 窗口自适应 -->
+	<script src="../lib/screen.js"></script>
+	<meta name="viewport" content="width=1920, minimum-scale = 0.7114583333333333, maximum-scale = 0.7114583333333333, target-densitydpi=device-dpi">
+	</head>
+	<body>
+	<div id="content" class="main-content">
+	<!-- 初始化coocaamap -->
+	
+		<div class="warpper home">
+			<!-- 预留统一头部样式 -->
+			<header></header>
+			<!-- 主体内容在此书写 -->
+			<div class="content">
+				<div class="container">
+				    <div class="progress progress-striped active">
+				      <div class="progress-bar"style="width: 66.7%"></div>
+				    </div>
+				    <div class="input">
+						<p class="text1">IP地址</p>
+						
+						<input type="text" class="coocaa_button cck" value="1234:4568:45af:452:455:4564:52:542" righttarget="#ok" id="ip" url="ip.html"></input>
+						
+						<p class="text1">网关地址</p>
+						
+						<input type="text" class="coocaa_button cck" value="1234:4568:45af:452:455:4564:52:542"righttarget="#ok" url="gateway.html"></input>
+						
+						<p class="text1">DNS地址</p>
+						
+						<select class="coocaa_button">
+							<option class="cck">1234:4568:45af:452:455:4564:52:542</option>
+							<option class="cck">9987:4568:45af:452:455:4564:52:542</option>
+						</select>
+					</div>
+				  	<div class="btn">
+				  		<button class="btn-primary coocaa_button" id="ok">确定</button>
+				    	<button class="btn-primary coocaa_button cck" lefttarget="#ip" url="dns.html">上一步</button>
+				  	</div>
+				</div>  	
+			</div>
+		</div>
+	</div>
+	<!-- 预留统一脚部样式 -->
+	<div id="footer" align="center"></div>
+	<!-- 用来表示选择的蓝色框框 -->
+	<div class="button_hover"></div>
+	<script src="../js/success.js"></script>
+	<script src="../js/init-1.js"></script>
+	</body>
+</html>

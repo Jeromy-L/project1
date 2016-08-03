@@ -1,0 +1,78 @@
+@import"mixin";
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+  width:100%;
+  height: 100%;
+  background:url(../images/bg.png);
+  color:white;
+}
+.container{
+  position:relative;
+  width:60%;
+  height:60%;
+  top:20%;
+  left:20%;
+  padding-top:1px;
+  background-image:url(../images/rect.png);
+  #img{
+    position:relative;
+    width:17%;
+    height:auto;
+    left:41%;
+    top:10%;
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+  .title{
+    position:relative;
+    margin-top:10%;
+    font-size:2em;
+    text-align:center;
+    
+  }
+}
+  
+  .btn{
+    position: relative;
+    top:15%;
+    width:100%;
+
+    .btn-primary {  
+      display:inline-block;
+      position:relative;
+      width:40%;
+      height:10%;
+      margin-left:7%;
+      font-size: 1.8em;
+      line-height: 1.8em;
+      color: #009491;
+      border-color: #357ebd;
+      border-radius: 4px;
+      border: 3px solid #006461;
+      border-color: #2e6da4;
+      background-color: transparent;
+      &:hover{
+        color: #009491;
+        background-color: #286090;
+        border-color: #204d74;
+      }
+    }
+  }
+
+.button_hover{
+  border:0px solid #f2fafe;
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  z-index:1000; 
+  border-radius:4px; 
+  -moz-border-radius:4px; 
+  -webkit-border-radius:4px; 
+  
+}
+

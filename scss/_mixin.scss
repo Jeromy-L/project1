@@ -1,0 +1,89 @@
+@mixin toolbar-item($pos, $hoverpos){
+	background-position: 0 $pos;
+	&:hover{
+		background-position:0 $hoverpos;
+	}
+}
+@mixin transition($transition){
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+@mixin transform-origin($origin){
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	transform-origin: $origin;
+}
+@mixin scale($scale){
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-ms-transform: scale($scale);
+	-o-transform: scale($scale);
+	transform: scale($scale);
+}
+@mixin opacity($opacity){
+	opacity: $opacity;
+	filter: alpha(opacity=$opacity*100);
+}
+@mixin box-sizing($box-sizing){
+	box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    -webkit-box-sizing: $box-sizing;
+}
+@mixin box-shadow($number){
+	box-shadow: $number;
+	-webkit-box-shadow: $number;
+	-moz-box-shadow:$number;
+}
+@mixin back-gradient($one,$two){
+	background:-webkit-#{$one}-gradient($two);
+	background:-moz-#{$one}-gradient($two);
+	background:-ms-#{$one}-gradient($two);
+}
+
+@mixin transform($change){
+	transform: $change;
+    -ms-transform: $change;
+    -webkit-transform: $change;
+    -o-transform: $change;
+    -moz-transform: $change;
+}
+@mixin animation($thing){
+	animation: $thing;
+	-ms-animation: $thing;
+	-webkit-animation: $thing;
+	-o-animation: $thing;
+	-moz-animation: $thing;
+}
+@mixin animation-delay($time){
+	animation-delay: $time;
+	-ms-animation-delay: $time;
+	-webkit-animation-delay: $time;
+	-o-animation-delay: $time;
+	-moz-animation-delay: $time;
+}
+@mixin keyframes($name){
+	@keyframes #{$name}{
+   		@content;
+	}
+	@-webkit-keyframes #{$name}{
+		@content;
+	}
+	@-moz-keyframes #{$name}{
+		@content;
+	}
+	@-o-keyframes #{$name}{
+		@content;
+	}
+}
+@mixin borderRadius($radius) {
+  border-radius:$radius;
+  -o-border-radius:$radius;
+  -ms-border-radius:$radius;
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+}

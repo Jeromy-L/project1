@@ -1,0 +1,110 @@
+@import"mixin";
+*{
+  margin:0;
+  padding:0;
+}
+.content{
+  height:100%;
+}
+.container{
+  width:100%;
+  height:100%;
+  padding-top:1px;
+  background-color:#929092;
+  
+    .progress{
+      display:block;
+      overflow: hidden;
+      margin:40px 10% 40px 10%;
+      width:80%;
+      height: 20px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, .1));
+      .progress-bar{
+        float: left;
+        width: 0;
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        background-color: #428bca;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+                box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+        @include transition(width .6s ease)
+      }
+    }
+    .progress-striped{
+      .progress-bar{
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+        background-image:linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+        background-size: 40px 40px;
+      }
+    }
+    .input{
+      margin:10% auto 0 10%;
+      width:80%;
+      .text1{
+        font-size:28px;
+        font-weight:bold;
+      }
+      input{
+        width:60%;
+        height:50px;
+        margin-bottom:5%;
+        border-width:0;
+        font-size:28px;
+        background-color:#929092;
+      }
+      select{
+        width:60%;
+        background-color:#929092;
+        height:50px;
+        border-width:0;
+        font-size:28px;
+        option{
+          border-width:5px;
+          border-color:black;
+        }
+      }
+    }
+  
+  .btn{
+    padding:0 0 0 10%;
+    .btn-primary {  
+      display:block;
+      position:relative;
+      width: 53%;
+      height:50px;
+      top:20px;
+      margin-bottom:20px;
+      font-size: 18px;
+      line-height: 1.33;
+      color: #fff;
+      border-color: #357ebd;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      border-color: #2e6da4;
+      background-color: #337ab7;
+      &:hover{
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+      }
+    }
+  }   
+}
+
+.button_hover{
+  border:1px solid #f2fafe;
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  z-index:1000; 
+  border-radius:4px; 
+  -moz-border-radius:4px; 
+  -webkit-border-radius:4px; 
+  box-shadow:0 0 25px 7px rgba(4,140,255,.9);
+}
+

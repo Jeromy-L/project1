@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://box.coocaa.com/ -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale= 1.0">
+	<title>设置主页</title>
+	<!-- 自己的css/scss文件 -->
+	<link href="../style/settingindex.css" rel="stylesheet">
+	<!-- 共有的css文件 -->
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<!-- 引入的js库 -->
+	<script src="../lib/jquery.min.js"></script>
+	<script src="../lib/coocaamap-1.1.js"></script>
+	<!-- 窗口自适应 -->
+	<script src="../lib/screen.js"></script>
+	<meta name="viewport" content="width=1920, minimum-scale = 0.7114583333333333, maximum-scale = 0.7114583333333333, target-densitydpi=device-dpi">
+	</head>
+	<body>
+	<div id="content" class="main-content">
+	<!-- 初始化coocaamap -->
+		<div class="warpper home">
+			<!-- 预留统一头部样式 -->
+			<header></header>
+			<!-- 主体内容在此书写 -->
+			<div class="content">
+				<div class="container">
+					<div class="head">
+					  网络设置
+					</div>
+					<div class="switch coocaa_button">
+					  <div class="title">IPV6网络开关</div>
+					  <input class="mui-switch mui-switch-anim " type="checkbox">
+					</div>
+					<div class="text">
+						<p class="text1">IP地址</p>
+						</br>
+						<p class="text2">未设置</p>
+						</br>
+						<p class="text1">网关地址</p>
+						</br>
+						<p class="text2">未设置</p>
+						</br>
+						<p class="text1">DNS地址</p>
+						</br>
+						<p class="text2">未设置</p>
+					</div>
+					<div class="input coocaa_button cck" url="ip.html">
+						<p class="text1">IP地址</p>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
+					</div>
+					<div class="input coocaa_button cck" url="gateway.html">	
+						<p class="text1">网关地址</p>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
+					</div>
+					<div class="input coocaa_button" id="dns">
+						<p class="text1">DNS地址</p>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
+						<div id="up"></div>	
+					</div>	
+					<div id="list">
+							<input type="text" class="coocaa_button down" value="1234:4568:45af:452:455:4564:52:542" url="aaa"></input>
+							<input type="text" class="coocaa_button down" value="4544:4568:45af:452:455:4564:52:542" url="bbb"></input>
+					</div>
+					<input type="button" class="btn-primary coocaa_button" id="btn" value="保存"></input>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 预留统一脚部样式 -->
+	<div id="footer" align="center"></div>
+	<!-- 用来表示选择的蓝色框框 -->
+	<div class="button_hover"></div>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script src="../js/settingindex.js"></script>
+	<script src="../js/init-1.js"></script>
+	</body>
+</html>

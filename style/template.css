@@ -1,0 +1,93 @@
+/* CSS Document */
+body{font-family:Microsoft YaHei,Tahoma,Helvetica,'SimSun',sans-serif;}
+body,ul,li,img,h1,dd,dl{padding:0; margin:0;}
+ul,li{list-style-type:none;}
+img{border:none;}
+*{border:none; outline:none;}
+.cl:after{content:""; display:block; height:0; clear:both; visibility:hidden;}
+.clear{clear:both;}
+
+.warpper{background:url(../images/main_bg.jpg) no-repeat; background-size:100% 100%;height: 1124px; width:1920px; overflow:hidden; position:relative;}
+.button_hover{border:3px solid #f2fafe; position:absolute; top:-6px; left:-6px; z-index:1000; border-radius:18px; -moz-border-radius:18px; -webkit-border-radius:18px; box-shadow:0 0 25px 7px rgba(4,140,255,.9);}
+
+header{padding:106px 177px 58px; color:#FFF;}
+header h1{font-size:48px; font-weight:normal; position:relative; line-height:50px; padding-left:85px;}
+header h1 em{display:block; position:absolute; width:60px; height:60px; left:0; top:-4px; background:url(../images/h_icon.png) no-repeat;}
+.content{padding:0 177px 0 177px;}
+.home section{width:1596px;}
+.home .main li{float:left; width:425px; height:666px; padding-right:30px;}
+.home .main li.small{width:201px;}
+.home .main li.small .i{height:201px; margin-bottom:30px; background:#999; position:relative;  border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; overflow:hidden}
+.home .main li.small .i img{border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px;}
+.home .main li b{display:block; position:absolute; color:#FFF; font-size:48px; bottom:59px; right:52px; font-weight:normal; z-index:20}
+.home .main li .con{height:666px; background:#999; border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; position:relative; overflow:hidden;}
+.home .main li .con img{border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; height:666px;}
+.con_border{border:1px solid rgba(255,255,255,.3); border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; width:423px; height:664px; position:absolute; top:0; left:0;}
+.home .main li.small .i .con_border{width:199px; height:199px;}
+
+.warpper.list{background:url(../images/list_bg.jpg) no-repeat;}
+.list section ul{margin-right:-35px;}
+.list section li{float:left; width:502px; height:320px; background:#999; margin:0 30px 30px 0; border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; overflow:hidden;}
+.list section li .li_con{height:320px; position:relative; border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px; overflow:hidden;}
+.list section li .tit{line-height:62px; font-size:30px; color:#FFF; position:absolute; z-index:20; bottom:0; text-align:center; width:100%; background:#0266e0; border-top:1px solid #0197f1; background: -webkit-gradient(linear, 0 0, 0 100%, from(#0167e4), to(#024dae));}
+.list section li .tit span{display:block; padding:0 10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.list_tab{}
+.list_tab header{padding-left:73px;}
+.list_tab .aside{float:left; width:150px; margin-right:40px; padding-top:78px;}
+.list_tab .aside dd{font-size:36px; color:#5e7795; text-indent:20px; line-height:40px; height:44px; margin-bottom:70px; position:relative;}
+.list_tab .aside .coocaa_button_hover{color:#fff;}
+.list_tab .aside .cbh{color:#FFF; font-weight:bold;}
+.list_tab .aside .cbh em{background:url(../images/list_tab_arr.png) no-repeat; width:20px; height:30px; position:absolute; top:6px; right:10px;}
+.list_tab section{float:left; width:1563px;}
+.list_tab .content{padding:0 73px;}
+
+.child header{font-size:48px; color:#FFF; padding:64px 119px; line-height:50px;} 
+.pingpai header{padding-bottom:40px;}
+.child section{width:1682px; margin:0 auto;}
+.child section ul{width:1799px;}
+.child section li{float:left; width:786px; height:138px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#0d6ede), to(#0053c3)); border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; margin-right:110px; margin-bottom:33px; color:#FFF; box-shadow:0 0 20px rgba(0,0,0,.6);}
+.pingpai section li{height:153px; margin-bottom:26px; overflow:hidden;}
+.child section li a{display:block; color:#FFF; font-size:30px; text-decoration:none; padding:10px 48px 0; }
+.ceping section li a{white-space:nowrap; text-overflow:ellipsis; overflow:hidden; height:90px; line-height:80px; }
+.pingpai section li a{ line-height:40px; height:82px; overflow:hidden; padding: 15px 30px 0;}
+.pingpai section li .img{float:left;}
+.pingpai section li .img img{width:156px; height:153px; background:#133550;}
+.pingpai section li .text{float:right; width:630px;}
+.child section li span{display:block; text-align:right; padding-right:48px; font-size:24px;}
+
+
+
+
+
+.arrow{ position:absolute; background:url(../images/arrow.png) no-repeat left 0;  margin-top:-40px; top:50%; width:34px; height:79px;}
+.arr_l{left:100px;}
+.arr_r{right:100px; background-position:right 0;}
+.coocaa_button{position:relative; z-index:20;}
+
+.rollwin{position:absolute; width:1920px; top:0; left:0;}
+/*对比页面*/
+.con2{height: 320px;width: 300px;background: #999; border-radius: 12px;-webkit-border-radius: 12px;-moz-border-radius: 12px;position: relative;overflow: hidden;}
+.con_border1 {border: 1px solid rgba(255,255,255,.3);border-radius: 12px;-webkit-border-radius: 12px;-moz-border-radius: 12px;width: 300px; height: 320px; position: absolute; top: 0; left: 0; } 
+.button1{background: url(/themes/classic/images/anniu.png) no-repeat; width: 292px; height: 66px;margin: 41px auto; left: 24px;} 
+.con3{width: 290px; background: #999; border-radius: 12px; -webkit-border-radius: 12px; -moz-border-radius: 12px; position: relative; overflow: hidden; height: 65px; left: 5px; } .con_border2 {border: 1px solid rgba(255,255,255,.3); border-radius: 12px; -webkit-border-radius: 12px; -moz-border-radius: 12px; width: 290px; height: 66px; position: absolute; top: 0; left: 0; }
+.cong{position: absolute; display: inline-block; left:40%; } 
+/*按钮*/
+.buttona {display: inline-block; outline: none; cursor: pointer; text-align: center; text-decoration: none; font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;text-shadow: 0 1px 1px rgba(0,0,0,.3); -webkit-border-radius: .5em; -moz-border-radius: .5em; border-radius: .5em; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); box-shadow: 0 1px 2px rgba(0,0,0,.2); background: #1064d0; }
+
+/* blue */
+.blue {color: #ffffff; border-top: solid 1px #1064d0; background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#1064d0)); background: -moz-linear-gradient(top, #0078a5,#1064d0); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#1064d0'); } 
+.green {color: #ffffff; border-top: solid 1px #13d4d3; background: -webkit-gradient(linear, left top, left bottom, from(#0dacab), to(#0e9897)); background: -moz-linear-gradient(top, #0dacab,#0e9897); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0dacab', endColorstr='#0e9897'); } 
+.bgred{color: #ffffff; border-top: solid 1px #f21313; background: -webkit-gradient(linear, left top, left bottom, from(#e40d0d), to(#c20d0d)); background: -moz-linear-gradient(top, #e40d0d,#c20d0d); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#e40d0d', endColorstr='#c20d0d'); }
+.red{color: #ffffff; border-top: solid 1px #fa9386; background: -webkit-gradient(linear, left top, left bottom, from(#f6635a), to(#e03322)); background: -moz-linear-gradient(top, #f6635a,#c20d0d); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6635a', endColorstr='#c20d0d'); }
+.ltred{color: #ffffff; border-top: solid 1px #e86067; background: -webkit-gradient(linear, left top, left bottom, from(#d14044), to(#a51e22)); background: -moz-linear-gradient(top, #d14044,#a51e22); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#d14044', endColorstr='#a51e22'); }
+
+.buttona.blue {position: absolute;top: 258px;width: 300px; height: 60px; border-radius: 0 0 0 11px; line-height: 57px; background-color: #1064d0; z-index: 10000000; font-size: 36px; text-align: center;}
+ /*对比页面*/
+.icon2{display: block; position: absolute; width: 76px; height: 60px; left: 0px; top: 4px; background: url(../images/icon2.png) no-repeat; } .selected{background:rgba(0,0,0,.5); height: 320px; width: 300px; position:absolute; top:0; left:0; display:block;}
+.selected span{display:block; color:#FFF; text-align:center; font-size:40px; padding-top:120px;} 
+.family .coocaa_button_hover .selected{display: none;}
+.zimu {position: relative; left: 700px; color: white; font-family: "微软雅黑"; font-size: 30px; /* line-height: 20px; */ top: 30px; margin-bottom: 26px;} 
+.buttona.blue.bon{position: relative;top: -66px; width: 300px; height: 61px;border-radius: 0 0 11px 11px; line-height: 61px; background-color: #1064d0; z-index: 10000000; font-size: 36px;}
+.buttona.blub {color: #ffffff; position: absolute; top: 260px; width: 300px; height: 60px; border-radius: 0 0 11px;line-height: 57px; background-color: #1064d0; z-index: 10000000; font-size: 36px; color:white; border-top:#13a0f0; background: -webkit-gradient(linear, left top, left bottom, from(#0d6de3), to(#0f53aa)); background: -moz-linear-gradient(top, #0d6de3,#0f53aa); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0d6de3', endColorstr='#0f53aa'); }
+.war1{background:url(../images/bg1.png) no-repeat; height:3470px; width:1920px; overflow:hidden; position:relative; padding-bottom:162px;}

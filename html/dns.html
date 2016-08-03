@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://box.coocaa.com/ -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale= 1.0">
+	<title>DNS</title>
+	<!-- 自己的css/scss文件 -->
+	<link href="../style/dns.css" rel="stylesheet">
+	<!-- 共有的css文件 -->
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<!-- 引入的js库 -->
+	<script src="../lib/jquery.min.js"></script>
+	<script src="../lib/coocaamap-1.1.js"></script>
+	<!-- 窗口自适应 -->
+	<script src="../lib/screen.js"></script>
+	<meta name="viewport" content="width=1920, minimum-scale = 0.7114583333333333, maximum-scale = 0.7114583333333333, target-densitydpi=device-dpi">
+	</head>
+	<body>
+	<div id="content" class="main-content">
+	<!-- 初始化coocaamap -->
+		<div class="warpper home">
+			<!-- 预留统一头部样式 -->
+			<header></header>
+			<!-- 主体内容在此书写 -->
+			<div class="content">
+				<div id="text">设置向导</div>
+				<ol class="ui-step">
+					<li class="step-start step-done">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">1</span>
+							<span class="ui-step-cont-text">设置IP地址</span>
+						</div>
+					</li>
+					<li>
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">2</span>
+							<span class="ui-step-cont-text">设置网关地址</span>
+						</div>
+					</li>
+					<li>
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">3</span>
+							<span class="ui-step-cont-text">选择DNS地址</span>
+						</div>
+					</li>
+					<li class="step-end">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">4</span>
+							<span class="ui-step-cont-text">设置完成</span>
+						</div>
+					</li>
+				</ol>
+				<div class="container">
+					<!-- 进度条 -->
+					
+				    <div class="title">
+				      <p>请选择你的DNS地址</p>
+				    </div>
+				    
+				    <!-- 输入框 -->
+				    <div class="input">
+				    	<!-- 输入框 -->
+				    	<div class="coocaa_button radio">
+							<input type="radio" id="radio1"> </input>
+							<label for="radio1"></label>
+							<label for="radio1">1234:4568:45af:452:455:4564:52:542</label>
+						</div>
+						<div class="coocaa_button radio">
+							<input type="radio" id="radio2" checked="checked"> </input>
+							<label for="radio2"></label>
+							<label for="radio2">4544:4568:45af:452:455:4564:52:542</label>
+						</div>
+						
+				    </div>
+				    <div class="btn-primary cck coocaa_button" id="before" url="gateway.html">
+				    	<p>上一步</p>
+				    </div>
+				    <!-- <div id="floatingBarsG">
+				    		<div class="blockG" id="rotateG_01"></div>
+				    		<div class="blockG" id="rotateG_02"></div>
+				    		<div class="blockG" id="rotateG_03"></div>
+				    		<div class="blockG" id="rotateG_04"></div>
+				    		<div class="blockG" id="rotateG_05"></div>
+				    		<div class="blockG" id="rotateG_06"></div>
+				    		<div class="blockG" id="rotateG_07"></div>
+				    		<div class="blockG" id="rotateG_08"></div>
+				    </div> -->
+				    <div class="btn-primary cck coocaa_button" id="next" url="success.html" href="settingindex.html">
+				    	<p>下一步</p>
+				    </div>
+
+				    <div class="alert alert-warning" style="display: none;">你输入的格式简直逆天了，请确认后再输入</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 预留统一脚部样式 -->
+	<div id="footer" align="center"></div>
+	<!-- 用来表示选择的蓝色框框 -->
+	<div class="button_hover"></div>
+	<script type="text/javascript" src="../js/cookie.js"></script>	
+	<script src="../js/dns.js"></script>
+	<script src="../js/init-1.js"></script>
+	<!-- <script type="text/javascript" src="../js/gateway1.js"></script> -->
+	<script type="text/javascript">
+		$(".alert").css({"width":$(".input").width()*0.9+'px',"left":$(".input").offset().left+'px'});
+		// var svg =/^[a-f0-9A-F]{4}$/;
+		// $(".coocaa_button").on("keyup",function(){
+		// 	var str = $(".coocaa_button_hover").val();
+		// 	if(str.length == 4)
+		// 	alert(svg.test(str));
+		// })
+		
+	</script>
+	</body>
+</html>
