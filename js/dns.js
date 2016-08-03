@@ -15,7 +15,7 @@ $(".content").css("height",warpperHeight);
 //再获取它的位置大小并设置在.button_hover样式上，移除只读属性并聚焦
 function buttonHover(){
 	var hoverTop = $(".coocaa_button_hover").offset().top;
-	var hoverLeft = $(".coocaa_button_hover").offset().left-1;
+	var hoverLeft = $(".coocaa_button_hover").offset().left;
 	var hoverWidth = $(".coocaa_button_hover").width();
 	var hoverHeight = $(".coocaa_button_hover").height();
 	$(".button_hover").css({"width":hoverWidth+"px","height":hoverHeight+"px","top":hoverTop+"px","left":hoverLeft+"px"});
@@ -32,7 +32,7 @@ function buttonHover(){
 		if ($("#next").offset().left!=hoverLeft) {
 			$("#next").css("color","#009491");
 		}else{
-			$("#next").css("color","#fff");
+			$("#before").css("color","#009491");
 		}
 	}else{
 		$(".btn-primary").css("color","#009491");
@@ -56,17 +56,23 @@ function buttonHover(){
 		}else{
 			var url = $(this).attr("href");  
 		}
-
+		var https = url.substring(0,8);
+		var http = url.substring(0,7);
+		if(https == "https://" || http=="http://"){
+			window.open(url,"_self");
+		}else{
+			window.open(url,"_self");
+		}
 		//点击下一步后，loading动画出现后跳转页面
-		setTimeout(function(){
-			var https = url.substring(0,8);
-			var http = url.substring(0,7);
-			if(https == "https://" || http=="http://"){
-				window.open(url,"_self");
-			}else{
-				window.open(url,"_self");
-			}
-		},"800")
+		// setTimeout(function(){
+		// 	var https = url.substring(0,8);
+		// 	var http = url.substring(0,7);
+		// 	if(https == "https://" || http=="http://"){
+		// 		window.open(url,"_self");
+		// 	}else{
+		// 		window.open(url,"_self");
+		// 	}
+		// },"800")
     });
 }
 // $(".progress-bar").animate({width:"66.7%"},2500)

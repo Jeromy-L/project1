@@ -46,17 +46,23 @@ function buttonHover(){
 		}else{
 			var url = $(this).attr("href");
 		}
-
+		var https = url.substring(0,8);
+		var http = url.substring(0,7);
+		if(https == "https://" || http=="http://"){
+			window.open(url,"_self");
+		}else{
+			window.open(url,"_self");
+		}
 		//点击下一步后，loading动画出现后跳转页面
-		setTimeout(function(){
-			var https = url.substring(0,8);
-			var http = url.substring(0,7);
-			if(https == "https://" || http=="http://"){
-				window.open(url,"_self");
-			}else{
-				window.open(url,"_self");
-			}
-		},"800")
+		// setTimeout(function(){
+		// 	var https = url.substring(0,8);
+		// 	var http = url.substring(0,7);
+		// 	if(https == "https://" || http=="http://"){
+		// 		window.open(url,"_self");
+		// 	}else{
+		// 		window.open(url,"_self");
+		// 	}
+		// },"800")
     });
 }
 function xml(){

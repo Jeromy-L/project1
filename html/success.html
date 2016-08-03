@@ -4,7 +4,7 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale= 1.0">
-	<title>完成设置向导</title>
+	<title>设置完成</title>
 	<!-- 自己的css/scss文件 -->
 	<link href="../style/success.css" rel="stylesheet">
 	<!-- 共有的css文件 -->
@@ -19,37 +19,73 @@
 	<body>
 	<div id="content" class="main-content">
 	<!-- 初始化coocaamap -->
-	
 		<div class="warpper home">
 			<!-- 预留统一头部样式 -->
 			<header></header>
 			<!-- 主体内容在此书写 -->
 			<div class="content">
+				<div class="back">
+					<img src="../images/bg.png"></img>
+				</div>
+				<div id="text">设置向导</div>
+				<ol class="ui-step">
+					<li class="step-start step-done">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">1</span>
+							<span class="ui-step-cont-text">设置IP地址</span>
+						</div>
+					</li>
+					<li class="step-done">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">2</span>
+							<span class="ui-step-cont-text">设置网关地址</span>
+						</div>
+					</li>
+					<li class="step-done">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">3</span>
+							<span class="ui-step-cont-text">选择DNS地址</span>
+						</div>
+					</li>
+					<li class="step-active step-end">
+						<div class="ui-step-line"></div>
+						<div class="ui-step-cont">
+							<span class="ui-step-cont-number">4</span>
+							<span class="ui-step-cont-text">设置完成</span>
+						</div>
+					</li>
+				</ol>
 				<div class="container">
-				    <div class="progress progress-striped active">
-				      <div class="progress-bar"style="width: 66.7%"></div>
-				    </div>
-				    <div class="input">
+					<!-- <div class="main">
+						<img src="../images/rect.png"></img>
+					</div> -->
+				    <div class="title">
+				      <p>设置完成</p>
+				    </div>				    
+			    	<!-- 输入框 -->
+			    	<div class="input coocaa_button cck" url="ip.html">
 						<p class="text1">IP地址</p>
-						
-						<input type="text" class="coocaa_button cck" value="1234:4568:45af:452:455:4564:52:542" righttarget="#ok" id="ip" url="ip.html"></input>
-						
-						<p class="text1">网关地址</p>
-						
-						<input type="text" class="coocaa_button cck" value="1234:4568:45af:452:455:4564:52:542"righttarget="#ok" url="gateway.html"></input>
-						
-						<p class="text1">DNS地址</p>
-						
-						<select class="coocaa_button">
-							<option class="cck">1234:4568:45af:452:455:4564:52:542</option>
-							<option class="cck">9987:4568:45af:452:455:4564:52:542</option>
-						</select>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
 					</div>
-				  	<div class="btn">
-				  		<button class="btn-primary coocaa_button" id="ok">确定</button>
-				    	<button class="btn-primary coocaa_button cck" lefttarget="#ip" url="dns.html">上一步</button>
-				  	</div>
-				</div>  	
+					<div class="input coocaa_button cck" url="gateway.html">	
+						<p class="text1">网关地址</p>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
+					</div>
+					<div class="input coocaa_button cck" url="dns.html" id="dns">
+						<p class="text1">DNS地址</p>
+						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
+					</div>	
+				    <div class="btn-primary cck coocaa_button" id="next" href="settingindex.html">
+				    	<p>完成</p>
+				    </div>
+					<div class="btn-primary cck coocaa_button" id="before" url="dns.html">
+				    	<p>上一步</p>
+				    </div>
+				    <div class="alert alert-warning" style="display: none;">你输入的格式简直逆天了，请确认后再输入</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -57,7 +93,19 @@
 	<div id="footer" align="center"></div>
 	<!-- 用来表示选择的蓝色框框 -->
 	<div class="button_hover"></div>
+	<script type="text/javascript" src="../js/cookie.js"></script>	
 	<script src="../js/success.js"></script>
 	<script src="../js/init-1.js"></script>
+	<!-- <script type="text/javascript" src="../js/gateway1.js"></script> -->
+	<script type="text/javascript">
+		$(".alert").css({"width":$(".input").width()*0.9+'px',"left":$(".input").offset().left+'px'});
+		// var svg =/^[a-f0-9A-F]{4}$/;
+		// $(".coocaa_button").on("keyup",function(){
+		// 	var str = $(".coocaa_button_hover").val();
+		// 	if(str.length == 4)
+		// 	alert(svg.test(str));
+		// })
+		
+	</script>
 	</body>
 </html>
