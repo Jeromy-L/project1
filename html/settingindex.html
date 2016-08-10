@@ -17,58 +17,55 @@
 	<meta name="viewport" content="width=1920, minimum-scale = 0.7114583333333333, maximum-scale = 0.7114583333333333, target-densitydpi=device-dpi">
 	</head>
 	<body>
-	<div id="content" class="main-content">
-	<!-- 初始化coocaamap -->
-		<div class="warpper home">
-			<!-- 预留统一头部样式 -->
-			<header></header>
-			<!-- 主体内容在此书写 -->
-			<div class="content">
-				<div class="back">
-					<img src="../images/bg.png"></img>
+	<div id="content" class="main-content">		
+		<div class="container">
+			<div class="head">
+			  网络设置
+			</div>
+			<div class="switch coocaa_button out1 out2">
+			  <div class="title">IPV6网络开关</div>
+			  <input class="mui-switch mui-switch-anim " type="checkbox">
+			</div>
+			<div class="alert">
+				<p>是否保存修改？</p>
+				<input type="button" class="btn-primary btn-sm" value="保存" id="left" ></input>
+				<input type="button" id="right"class="btn-primary  btn-sm" value="不保存"></input>
+			</div>
+			<div class="text">
+				<p class="text1">IP地址</p>
+				
+				<p class="text2" id="ip1">未设置</p>
+				
+				<p class="text1">网关地址</p>
+				
+				<p class="text2" id="gate1">未设置</p>
+				
+				<p class="text1">DNS地址</p>
+				
+				<p class="text2" id="dns1">未设置</p>
+			</div>
+			<div class="input">
+				<div class="out1 coocaa_button out2 cck" url="ip.html">
+					<p class="text1">IP地址</p>
+					<input type="button"  id="ip" value="1234:4568:45af:452:455:4564:52:542"></input>
 				</div>
-				<div class="container">
-					<div class="head">
-					  网络设置
-					</div>
-					<div class="switch coocaa_button">
-					  <div class="title">IPV6网络开关</div>
-					  <input class="mui-switch mui-switch-anim " type="checkbox">
-					</div>
-					<div class="text">
-						<p class="text1">IP地址</p>
-						</br>
-						<p class="text2">未设置</p>
-						</br>
-						<p class="text1">网关地址</p>
-						</br>
-						<p class="text2">未设置</p>
-						</br>
-						<p class="text1">DNS地址</p>
-						</br>
-						<p class="text2">未设置</p>
-					</div>
-					<div class="input coocaa_button cck" url="ip.html">
-						<p class="text1">IP地址</p>
-						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
-					</div>
-					<div class="input coocaa_button cck" url="gateway.html">	
-						<p class="text1">网关地址</p>
-						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
-					</div>
-					<div class="input coocaa_button" id="dns">
-						<p class="text1">DNS地址</p>
-						<input type="text"  value="1234:4568:45af:452:455:4564:52:542"></input>
-						<div id="up"></div>	
-					</div>	
-					<div id="list">
-							<input type="text" class="coocaa_button down" value="1234:4568:45af:452:455:4564:52:542" url="aaa"></input>
-							<input type="text" class="coocaa_button down" value="4544:4568:45af:452:455:4564:52:542" url="bbb"></input>
-					</div>
-					<input type="button" class="btn-primary coocaa_button" id="btn" value="保存"></input>
-					
+				<div class=" out1 coocaa_button out2 cck" url="gateway.html">	
+					<p class="text1">网关地址</p>
+					<input type="button" id="gateway" value="1234:4568:45af:452:455:4564:52:542"></input>
+				</div>
+				<div class="coocaa_button out1 out2" id="dns" bottomTarget="#btn">
+					<p class="text1">DNS地址</p>
+					<input type="button" id="dns0" value="1234:4568:45af:452:455:4564:52:542"></input>
+					<div id="up"></div>	
+				</div>	
+				<div id="list">
+						<div type="button" class=" down" id="one" url="aaa">1234:4568:45af:452:455:4564:52:542</div>
+						</hr>
+						<div type="button" class=" down"id="two"url="bbb" >4544:4568:45af:452:455:4564:52:542</div>
 				</div>
 			</div>
+			
+			<input type="button" class="btn-primary coocaa_button out2" id="btn"  value="保存"></input>
 		</div>
 	</div>
 	<!-- 预留统一脚部样式 -->

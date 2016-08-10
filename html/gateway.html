@@ -9,6 +9,8 @@
 	<link href="../style/gateway.css" rel="stylesheet">
 	<!-- 共有的css文件 -->
 	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<link href="http://cdn.bootcss.com/material-design-icons/2.2.3/iconfont/material-icons.css" rel="stylesheet">
+
 	<!-- 引入的js库 -->
 	<script src="../lib/jquery.min.js"></script>
 	<script src="../lib/coocaamap-1.1.js"></script>
@@ -67,11 +69,14 @@
 				      <p>设置你的网关地址</p>
 				    </div>
 				    
-				    <input type="text" class="coocaa_button"></input>
+				    <input type="text" class="coocaa_button" id="gateway"></input>
 				    <div class="tip">地址示例：2001:0db8:0000:0000:1319:8a2e:0370:7344
 					<p>2001:0db8::1319:8a2e:0370:7344</p>
 					</div>
-				    <div class="btn-primary cck coocaa_button" url="dns.html" href="settingindex.html">
+					<div class="btn-primary cck coocaa_button" id="before" url="ip.html">
+				    	<p>上一步</p>
+				    </div>
+				    <div class="btn-primary cck coocaa_button" id="next" url="dns.html" href="settingindex.html">
 				    	<!-- <div id="floatingBarsG">
 				    		<div class="blockG" id="rotateG_01"></div>
 				    		<div class="blockG" id="rotateG_02"></div>
@@ -82,9 +87,9 @@
 				    		<div class="blockG" id="rotateG_07"></div>
 				    		<div class="blockG" id="rotateG_08"></div>
 				    	</div> -->
-				    	<p>保存</p>
+				    	<p>下一步</p>
 				    </div>
-				    <div class="alert alert-warning" style="display: none;">你输入的格式简直逆天了，请确认后再输入</div>
+				    <div class="alert alert-warning"><i class="material-icons">sentiment_dissatisfied</i><p>冒号之间头次出现非零数前的零可省略</p></div>
 				</div>
 			</div>
 		</div>
@@ -97,15 +102,6 @@
 	<script src="../js/gateway.js"></script>
 	<script src="../js/init-1.js"></script>
 	<!-- 让输入的字符个数超过4后自动到下一个输入框 -->
-	<script type="text/javascript">
-		
-		// var svg =/^[a-f0-9A-F]{4}$/;
-		// $(".coocaa_button").on("keyup",function(){
-		// 	var str = $(".coocaa_button_hover").val();
-		// 	if(str.length == 4)
-		// 	alert(svg.test(str));
-		// })
-		
-	</script>
+	
 	</body>
 </html>

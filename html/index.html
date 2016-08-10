@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale= 1.0">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<script type="text/javascript" src="../lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../lib/coocaamap-1.1.js"></script>
+	
+	<!-- 窗口自适应 -->
+	<script src="../lib/screen.js"></script>
+	<meta name="viewport" content="width=1920, minimum-scale = 0.7114583333333333, maximum-scale = 0.7114583333333333, target-densitydpi=device-dpi">
+</head>
+<body>
+	
+	<div id="content" class="main-content">
+	<!-- 初始化coocaamap -->
+	<script src="../lib/init.js"></script>
+		<div class="warpper home">
+			<!-- 预留统一头部样式 -->
+			<header></header>
+			<!-- 主体内容在此书写 -->
+			<div class="content">
+				<div class="index">
+				<div class="bg"><img src="../images/homepage/bg.png"></div>
+				<div class="bg_cover"><img src="../images/homepage/gradual_change.png"></div>
+				<div class="bg1"><img src="../images/homepage/bg.png"></div>
+				<div class="bg_cover1"><img src="../images/homepage/gradual_change.png"></div>
+				<!-- 主页左侧导航栏 -->		
+					<div class="left">
+						<div class="left_content">
+							<div class="coocaa_button cck active_opn option opn1" righttarget=".r1c1" uptarget=".opn1"downtarget=".opn2"><img src="../images/homepage/icon_big_chosen/live_tv.png"><span>推荐</span></div>
+							<div id="options">
+								<div class="coocaa_button cck opn option opn2" righttarget=".r1c1" uptarget=".opn1" downtarget=".opn3" url="/Category/recently"><img src="../images/homepage/icon_small/ic_history_white_small.png"><span>最近播放</span></div>
+								<div class="coocaa_button cck opn option opn3" righttarget=".r1c1" uptarget=".opn2" downtarget=".opn4" url="/Category/centre"><img src="../images/homepage/icon_small/CCTV.png"><span>央视</span></div>
+								<div class="coocaa_button cck opn option opn4" righttarget=".r1c1" uptarget=".opn3" downtarget=".opn5" url="/Category/place"><img src="../images/homepage/icon_small/ic_toys_white_48dp_2x.png"><span>地方卫视</span></div>
+								<div class="coocaa_button cck opn option opn5" righttarget=".r1c1" uptarget=".opn4" downtarget=".opn6" url="/Category/others"><img src="../images/homepage/icon_small/ic_movie_filter_white_48dp_2x.png"><span>其他</span></div>
+								<div class="coocaa_button cck opn option opn6" rightTarget=".internet_set" uptarget=".opn5" downtarget=".opn6" url="/Category/internet"><img src="../images/homepage/icon_small/ic_settings_white_48dp_2x.png"><span>IPV6网络</span></div>
+							</div>
+						</div>
+					</div>
+					<!-- 主页右侧 -->
+					<div class="right">
+						<div class="top">
+							<div class="top_content">
+								<a href="#" class="coocaa_button cck opn_top" uptarget=".opn_top" downtarget=".r1c3" leftTarget=".opn_top"><img class="unchosen" src="../images/homepage/IPV6/not_chosen_bottom.png"><img class="icon" src="../images/homepage/IPV6/signal_normal.png"></a>
+							</div>
+						</div>
+						<div class="bottom">
+							<ul class="recommend">
+								<li class="row">
+									<span class="box1">
+										<img src="../images/card1_small.png" class="coocaa_button cck r1c1 video" uptarget=".opn_top" lefttarget=".chosen" righttarget=".r1c2" downtarget=".r2c1" url="C:/Users/lenovo/Desktop/project11/project/html/video.html"><div class="video_hover a1"></div><img src="../images/front_small.png" class="b b1"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+									<span class="box2">
+										<img src="../images/card2_small.png" class="coocaa_button cck video r1c2" uptarget=".opn_top" lefttarget=".r1c1" righttarget=".r1c3" downtarget=".r2c2" url="/Category/video2"><div class="video_hover a2"></div><img src="../images/front_small.png" class="b b2"><div class="video_title"><div class="main_title">CCTV</div><div class="sub_title">正在直播：舌尖上的中国</div></div><div class="default_title">CCTV</div>
+									</span>
+									<span class="box3">
+										<img src="../images/card3_small.png" class="coocaa_button cck video r1c3" uptarget=".opn_top" lefttarget=".r1c2" righttarget=".r1c1" downtarget=".r2c3" url="/Category/video3"><div class="video_hover a3"></div><img src="../images/front_small.png" class="b b3"><div class="video_title"><div class="main_title">湖南卫视</div><div class="sub_title">正在直播：快乐大本营</div></div><div class="default_title">湖南卫视</div>
+									</span> 
+								</li>
+								<li class="row">
+									<span class="box4">
+										<img src="../images/card4_small.png" class="coocaa_button cck video r2c1" lefttarget=".chosen" righttarget=".r2c2" uptarget=".r1c1" downtarget=".r3c1" url="/Category/video4"><div class="video_hover a4"></div><img src="../images/front_small.png" class="b b4"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+									<span class="box5">
+										<img src="../images/card5_small.png" class="coocaa_button cck video r2c2" lefttarget=".r2c1" righttarget=".r2c3" uptarget=".r1c2" downtarget=".r3c2" url="/Category/video5"><div class="video_hover a5"></div><img src="../images/front_small.png" class="b b5"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+									<span class="box6">
+										<img src="../images/card6_small.png" class="coocaa_button cck video r2c3" lefttarget=".r2c2" righttarget=".r2c1" uptarget=".r1c3" downtarget=".r3c3" url="/Category/video6"><div class="video_hover a6"></div><img src="../images/front_small.png" class="b b6"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+								</li>
+								<li class="row">
+									<span class="box7">
+										<img src="../images/card7_small.png" class="coocaa_button cck video r3c1" lefttarget=".chosen" righttarget=".r3c2" uptarget=".r2c1" downtarget=".r1c1" url="/Category/video7"><div class="video_hover a7"></div><img src="../images/front_small.png" class="b b7"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+									<span class="box8">
+										<img src="../images/card8_small.png" class="coocaa_button cck video r3c2" lefttarget=".r3c1" righttarget=".r3c3" uptarget=".r2c2" downtarget=".r1c2" url="/Category/video8"><div class="video_hover a8"></div><img src="../images/front_small.png" class="b b8"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+									<span class="box9">
+										<img src="../images/card9_small.png" class="coocaa_button cck video r3c3" lefttarget=".r3c2" righttarget=".r3c1" uptarget=".r2c3" downtarget=".r1c3" url="/Category/video9"><div class="video_hover a9"></div><img src="../images/front_small.png" class="b b9"><div class="video_title"><div class="main_title">东方卫视</div><div class="sub_title">正在直播：极限挑战</div></div><div class="default_title">东方卫视</div>
+									</span>
+								</li>
+							</ul>
+							<ul class="recently">
+								<li class="row">
+									<span class="box1">
+										<img src="../images/card1_small.png" class="coocaa_button cck r1c1 video" uptarget=".opn_top" lefttarget=".chosen" righttarget=".r1c2" downtarget=".r2c1"  url="C:/Users/lenovo/Desktop/project11/project/html/video.html"><div class="video_hover a1"></div><img src="../images/front_small.png" class="b b1">
+									</span>
+									<span class="box2">
+										<img src="../images/card2_small.png" class="coocaa_button cck video r1c2" uptarget=".opn_top" lefttarget=".r1c1" righttarget=".r1c3" downtarget=".r2c2" url="/Category/video2"><div class="video_hover a2"></div><img src="../images/front_small.png" class="b b2">
+									</span>
+									<span class="box3">
+										<img src="../images/card3_small.png" class="coocaa_button cck video r1c3" uptarget=".opn_top" lefttarget=".r1c2" downtarget=".r2c3" url="/Category/video3"><div class="video_hover a3"></div><img src="../images/front_small.png" class="b b3">
+									</span> 
+								</li>
+								<li class="row">
+									<span class="box4">
+										<img src="../images/card4_small.png" class="coocaa_button cck video r2c1" lefttarget=".chosen" righttarget=".r2c2" uptarget=".r1c1" downtarget=".r3c1" url="/Category/video4"><div class="video_hover a4"></div><img src="../images/front_small.png" class="b b4">
+									</span>
+									<span class="box5">
+										<img src="../images/card5_small.png" class="coocaa_button cck video r2c2" lefttarget=".r2c1" righttarget=".r2c3" uptarget=".r1c2" downtarget=".r3c2" url="/Category/video5"><div class="video_hover a5"></div><img src="../images/front_small.png" class="b b5">
+									</span>
+									<span class="box6">
+										<img src="../images/card6_small.png" class="coocaa_button cck video r2c3" lefttarget=".r2c2" uptarget=".r1c3" downtarget=".r3c3" url="/Category/video6"><div class="video_hover a6"></div><img src="../images/front_small.png" class="b b6">
+									</span>
+								</li>
+								<li class="row">
+									<span class="box7">
+										<img src="../images/card7_small.png" class="coocaa_button cck video r3c1" lefttarget=".chosen" righttarget=".r3c2" uptarget=".r2c1" downtarget=".r1c1" url="/Category/video7"><div class="video_hover a7"></div><img src="../images/front_small.png" class="b b7">
+									</span>
+									<span class="box8">
+										<img src="../images/card8_small.png" class="coocaa_button cck video r3c2" lefttarget=".r3c1" righttarget=".r3c3" uptarget=".r2c2" downtarget=".r1c2" url="/Category/video8"><div class="video_hover a8"></div><img src="../images/front_small.png" class="b b8">
+									</span>
+									<span class="box9">
+										<img src="../images/card9_small.png" class="coocaa_button cck video r3c3" lefttarget=".r3c2" uptarget=".r2c3" downtarget=".r1c3" url="/Category/video9"><div class="video_hover a9"></div><img src="../images/front_small.png" class="b b9">
+									</span>
+								</li>
+							</ul>
+							<ul class="CCTV">
+								<li class="row">
+									<span class="box1">
+										<img src="../images/card1_small.png" class="coocaa_button cck r1c1 video" uptarget=".opn_top" lefttarget=".chosen" righttarget=".r1c2" downtarget=".r2c1"  url="C:/Users/lenovo/Desktop/project11/project/html/video.html"><div class="video_hover a1"></div><img src="../images/front_small.png" class="b b1">
+									</span>
+									<span class="box2">
+										<img src="../images/card2_small.png" class="coocaa_button cck video r1c2" uptarget=".opn_top" lefttarget=".r1c1" righttarget=".r1c3" downtarget=".r2c2" url="/Category/video2"><div class="video_hover a2"></div><img src="../images/front_small.png" class="b b2">
+									</span>
+									<span class="box3">
+										<img src="../images/card3_small.png" class="coocaa_button cck video r1c3" uptarget=".opn_top" lefttarget=".r1c2" downtarget=".r2c3" url="/Category/video3"><div class="video_hover a3"></div><img src="../images/front_small.png" class="b b3">
+									</span> 
+								</li>
+								<li class="row">
+									<span class="box4">
+										<img src="../images/card4_small.png" class="coocaa_button cck video r2c1" lefttarget=".chosen" righttarget=".r2c2" uptarget=".r1c1" downtarget=".r3c1" url="/Category/video4"><div class="video_hover a4"></div><img src="../images/front_small.png" class="b b4">
+									</span>
+									<span class="box5">
+										<img src="../images/card5_small.png" class="coocaa_button cck video r2c2" lefttarget=".r2c1" righttarget=".r2c3" uptarget=".r1c2" downtarget=".r3c2" url="/Category/video5"><div class="video_hover a5"></div><img src="../images/front_small.png" class="b b5">
+									</span>
+									<span class="box6">
+										<img src="../images/card6_small.png" class="coocaa_button cck video r2c3" lefttarget=".r2c2" uptarget=".r1c3" downtarget=".r3c3" url="/Category/video6"><div class="video_hover a6"></div><img src="../images/front_small.png" class="b b6">
+									</span>
+								</li>
+								<li class="row">
+									<span class="box7">
+										<img src="../images/card7_small.png" class="coocaa_button cck video r3c1" lefttarget=".chosen" righttarget=".r3c2" uptarget=".r2c1" downtarget=".r1c1" url="/Category/video7"><div class="video_hover a7"></div><img src="../images/front_small.png" class="b b7">
+									</span>
+									<span class="box8">
+										<img src="../images/card8_small.png" class="coocaa_button cck video r3c2" lefttarget=".r3c1" righttarget=".r3c3" uptarget=".r2c2" downtarget=".r1c2" url="/Category/video8"><div class="video_hover a8"></div><img src="../images/front_small.png" class="b b8">
+									</span>
+									<span class="box9">
+										<img src="../images/card9_small.png" class="coocaa_button cck video r3c3" lefttarget=".r3c2" uptarget=".r2c3" downtarget=".r1c3" url="/Category/video9"><div class="video_hover a9"></div><img src="../images/front_small.png" class="b b9">
+									</span>
+								</li>
+							</ul>
+							<ul class="place">
+								<li class="row">
+									<span class="box1">
+										<img src="../images/card1_small.png" class="coocaa_button cck r1c1 video" uptarget=".opn_top" lefttarget=".chosen" righttarget=".r1c2" downtarget=".r2c1"  url="C:/Users/lenovo/Desktop/project11/project/html/video.html"><div class="video_hover a1"></div><img src="../images/front_small.png" class="b b1">
+									</span>
+									<span class="box2">
+										<img src="../images/card2_small.png" class="coocaa_button cck video r1c2" uptarget=".opn_top" lefttarget=".r1c1" righttarget=".r1c3" downtarget=".r2c2" url="/Category/video2"><div class="video_hover a2"></div><img src="../images/front_small.png" class="b b2">
+									</span>
+									<span class="box3">
+										<img src="../images/card3_small.png" class="coocaa_button cck video r1c3" uptarget=".opn_top" lefttarget=".r1c2" downtarget=".r2c3" url="/Category/video3"><div class="video_hover a3"></div><img src="../images/front_small.png" class="b b3">
+									</span> 
+								</li>
+								<li class="row">
+									<span class="box4">
+										<img src="../images/card4_small.png" class="coocaa_button cck video r2c1" lefttarget=".chosen" righttarget=".r2c2" uptarget=".r1c1" downtarget=".r3c1" url="/Category/video4"><div class="video_hover a4"></div><img src="../images/front_small.png" class="b b4">
+									</span>
+									<span class="box5">
+										<img src="../images/card5_small.png" class="coocaa_button cck video r2c2" lefttarget=".r2c1" righttarget=".r2c3" uptarget=".r1c2" downtarget=".r3c2" url="/Category/video5"><div class="video_hover a5"></div><img src="../images/front_small.png" class="b b5">
+									</span>
+									<span class="box6">
+										<img src="../images/card6_small.png" class="coocaa_button cck video r2c3" lefttarget=".r2c2" uptarget=".r1c3" downtarget=".r3c3" url="/Category/video6"><div class="video_hover a6"></div><img src="../images/front_small.png" class="b b6">
+									</span>
+								</li>
+								<li class="row">
+									<span class="box7">
+										<img src="../images/card7_small.png" class="coocaa_button cck video r3c1" lefttarget=".chosen" righttarget=".r3c2" uptarget=".r2c1" downtarget=".r1c1" url="/Category/video7"><div class="video_hover a7"></div><img src="../images/front_small.png" class="b b7">
+									</span>
+									<span class="box8">
+										<img src="../images/card8_small.png" class="coocaa_button cck video r3c2" lefttarget=".r3c1" righttarget=".r3c3" uptarget=".r2c2" downtarget=".r1c2" url="/Category/video8"><div class="video_hover a8"></div><img src="../images/front_small.png" class="b b8">
+									</span>
+									<span class="box9">
+										<img src="../images/card9_small.png" class="coocaa_button cck video r3c3" lefttarget=".r3c2" uptarget=".r2c3" downtarget=".r1c3" url="/Category/video9"><div class="video_hover a9"></div><img src="../images/front_small.png" class="b b9">
+									</span>
+								</li>
+							</ul>
+							<ul class="others">
+								<li class="row">
+									<span class="box1">
+										<img src="../images/card1_small.png" class="coocaa_button cck r1c1 video" uptarget=".opn_top" lefttarget=".chosen" righttarget=".r1c2" downtarget=".r2c1"  url="C:/Users/lenovo/Desktop/project11/project/html/video.html"><div class="video_hover a1"></div><img src="../images/front_small.png" class="b b1">
+									</span>
+									<span class="box2">
+										<img src="../images/card2_small.png" class="coocaa_button cck video r1c2" uptarget=".opn_top" lefttarget=".r1c1" righttarget=".r1c3" downtarget=".r2c2" url="/Category/video2"><div class="video_hover a2"></div><img src="../images/front_small.png" class="b b2">
+									</span>
+									<span class="box3">
+										<img src="../images/card3_small.png" class="coocaa_button cck video r1c3" uptarget=".opn_top" lefttarget=".r1c2" downtarget=".r2c3" url="/Category/video3"><div class="video_hover a3"></div><img src="../images/front_small.png" class="b b3">
+									</span> 
+								</li>
+								<li class="row">
+									<span class="box4">
+										<img src="../images/card4_small.png" class="coocaa_button cck video r2c1" lefttarget=".chosen" righttarget=".r2c2" uptarget=".r1c1" downtarget=".r3c1" url="/Category/video4"><div class="video_hover a4"></div><img src="../images/front_small.png" class="b b4">
+									</span>
+									<span class="box5">
+										<img src="../images/card5_small.png" class="coocaa_button cck video r2c2" lefttarget=".r2c1" righttarget=".r2c3" uptarget=".r1c2" downtarget=".r3c2" url="/Category/video5"><div class="video_hover a5"></div><img src="../images/front_small.png" class="b b5">
+									</span>
+									<span class="box6">
+										<img src="../images/card6_small.png" class="coocaa_button cck video r2c3" lefttarget=".r2c2" uptarget=".r1c3" downtarget=".r3c3" url="/Category/video6"><div class="video_hover a6"></div><img src="../images/front_small.png" class="b b6">
+									</span>
+								</li>
+								<li class="row">
+									<span class="box">
+										<img src="../images/card7_small.png" class="coocaa_button cck video r3c1" lefttarget=".chosen" righttarget=".r3c2" uptarget=".r2c1" downtarget=".r1c1" url="/Category/video7"><div class="video_hover a7"></div><img src="../images/front_small.png" class="b b7">
+									</span>
+									<span class="box8">
+										<img src="../images/card8_small.png" class="coocaa_button cck video r3c2" lefttarget=".r3c1" righttarget=".r3c3" uptarget=".r2c2" downtarget=".r1c2" url="/Category/video8"><div class="video_hover a8"></div><img src="../images/front_small.png" class="b b8">
+									</span>
+									<span class="box9">
+										<img src="../images/card9_small.png" class="coocaa_button cck video r3c3" lefttarget=".r3c2" uptarget=".r2c3" downtarget=".r1c3" url="/Category/video9"><div class="video_hover a9"></div><img src="../images/front_small.png" class="b b9">
+									</span>
+								</li>
+							</ul>
+							<div class="internet">
+								<span class="coocaa_button cck setting internet_set" lefttarget=".chosen" rightTarget=".internet_test" uptarget=".opn_top" downtarget=".set_guide" url="http://www.codemans.cn/Coocaa/html/settingindex.html"><img src="../images/homepage/setting_small.png" class="bg_small"><img src="../images/homepage/setting.png" class="bg_big"><img src="../images/homepage/front_small.png" class="black_hover"><div></div><a>网络设置</a></span>
+								<input type="text" name="ip" id="ip" value="getip()">
+								<input type="text" name="dns" id="dns" value="getdns()">
+								<input type="text" name="gateway" id="gateway" value="getroute()">
+								<input type="submit" value=" " onclick="test()" class="coocaa_button setting internet_test" lefttarget=".internet_set" uptarget=".opn_top" downtarget=".set_guide"/>
+								<span class="inline">	
+									<img src="../images/homepage/testing.png" class="bg_small">
+									<img src="../images/homepage/testing_enlarge.png" class="bg_big">
+									<img src="../images/homepage/front_small.png"" class="black_hover">
+									<div></div><a>网络检测</a>
+								</span>
+								<div class="coocaa_button cck setting set_guide" lefttarget=".internet_test" uptarget=".internet_test" url="http://www.codemans.cn/Coocaa/html/guide.html"><img src="../images/homepage/guide.png" class="bt_icon"><img src="../images/homepage/bottom.png" class="bt_circle"><img src="../images/homepage/bottom_enlarge.png" class="bt_square"><span>设置向导</span></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- 检测结果页面 -->
+				<div class="test_result">
+					<div class="bg"><img src="../images/bg.png"></div>
+					<div class="results">
+						<div class="title"><img src="../images/ic_tv.png"><span>检查结果</span></div>
+						<div class="result_box">	
+							<div class="result main conect"><span>网络连接</span><a class="short">检测中</a></div>
+							<div class="result address IPV6">
+								<div class="main"><span>IP地址</span><a class="short">检测中</a></div>
+								<div class="sub">1111:2222:3333:4444:5555:6666:7777:8888</div>
+							</div>
+							<div class="result address gateway">
+								<div class="main"><span>网关地址</span><a class="short">检测中</a></div>
+								<div class="sub">1111:2222:3333:4444:5555:6666:7777:8888</div>
+							</div>
+							<div class="result address DNS">
+								<div class="main"><span>DNS</span><a class="short">检测中</a></div>
+								<div class="sub">1111:2222:3333:4444:5555:6666:7777:8888</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn">
+						<div><a class="coocaa_button cck reset" url="http://www.codemans.cn/Coocaa/html/settingindex.html" downTarget=".cancel" href="#" style="background: url(../images/bottom_side.png)">前往设置修改</a></div>
+						<div><a class="coocaa_button cck cancel" upTarget=".reset" url="http://www.codemans.cn/Coocaa/html/index.html">取消</a></div>
+					</div>
+				</div>
+				<!-- 加载页面 -->
+				<div class="test_loading">
+					<div class="bg"><img src="../images/bg.png"></div>
+					<div class="load">
+						<h1>网络检测中...</h1>
+						<div class="slider">
+							<div class="line"></div>
+							  <div class="break dot1"></div>
+							  <div class="break dot2"></div>
+							  <div class="break dot3"></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+	<div id="footer" align="center">
+	</div>
+	<div class="button_hover" style="width: 214px; height: 213px; top: 667px; left: 622px;"></div>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/internet.js"></script>
+</body>
+</html>

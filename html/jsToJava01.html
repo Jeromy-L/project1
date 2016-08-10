@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scale=1">
+    <title></title>
+
+    <style type="text/css" rel="stylesheet">
+        .line{
+            width:100%;
+            background: #000000;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        input{
+            margin: 5px 5px 5px 5px;
+        }
+        button{
+            margin: 5px 5px 5px 5px;
+        }
+        .button_hover {
+          border: 0px solid #f2fafe;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 1000;
+          border-radius: 4px;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px; 
+      }
+    </style>
+</head>
+<body  bgcolor="red">
+
+<input type="text" id="text_msg_ip" class=" coocaa_button" style="width:60%; height: auto; padding:  2px 2px 2px 2px; float: left;">
+<button type="button"  class=" coocaa_button" onclick="setip()"
+        style="width:20%; height: auto; padding:  2px 2px 2px 2px; float: left;">设置IP</button>
+<br>
+<input type="text" id="text_msg_route" class=" coocaa_button"  style="width:60%; height: auto; padding:  2px 2px 2px 2px; float: left;">
+<button type="button"  class=" coocaa_button"   onclick="setroute()"
+        style="width:20%; height: auto; padding:  2px 2px 2px 2px; float: left;">设置网关</button>
+ <br>
+ <br>
+  <br>
+<button type="button" class=" coocaa_button"  onclick="getip()" style="width:15%; height: auto; padding:  2px 2px 2px 2px; float: left;">获取IP等JSON信息</button>
+<div style="width: 95%;height: 100px;"></div>
+<div id="text_result_ip" style="width:95%">
+    <h3>本设备ip信息：</h3><br>
+</div>
+<button type="button" class=" coocaa_button"  onclick="getroute()" style="width:15%; height: auto; padding:  2px 2px 2px 2px; float: left;">获取rount等JSON信息</button>
+<div style="width: 95%;height: 100px;"></div>
+<div id="text_result_route" style="width:95%">
+    <h3>本设备网关信息：</h3><br>
+</div>
+<br>
+ <br>
+ <button type="button"   onclick="setdns()"
+        style="width:20%; height: auto; padding:  2px 2px 2px 2px; float: left;">测试设置DNS</button>
+</body>
+ <button type="button"   onclick="playtest()"
+        style="width:20%; height: auto; padding:  2px 2px 2px 2px; float: left;">播放视频</button>
+</body>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/coocaamap-1.1.js"></script>
+<script src="../js/init-1.js"></script>
+<script type="text/javascript" >
+
+    <!--  call -->
+    function setip (){
+        var ip=document.getElementById("text_msg_ip").value;
+        COOCAAIPV6.setDeviceNetInfo("ip","2001:250:3c02:1000::25");
+    }
+    
+     function setroute (){
+        var route=document.getElementById("text_msg_route").value;
+        COOCAAIPV6.setDeviceNetInfo("route","2001:250:3c02:1000::1");
+    }
+    
+    function setdns(){
+        COOCAAIPV6.setDeviceNetInfo("dns","2001:4860:4860::8888");
+    }
+    
+     function playtest(){
+        COOCAAIPV6.getDeviceNetInfo("dns")
+    }
+    
+    function getip()
+    {
+         if(COOCAAIPV6 != null){
+            document.getElementById("text_result_ip").innerHTML+=("<span>"+COOCAAIPV6.getDeviceNetInfo("ip")+"</span><br>");
+        }
+    }
+    
+     function getroute()
+    {
+         if(COOCAAIPV6 != null){
+            document.getElementById("text_result_route").innerHTML+=("<span>"+COOCAAIPV6.getDeviceNetInfo("route")+"</span><br>");
+        }
+    }
+    <!--    typestr 标示-->
+    function onJsAndroidPing(typestr,addr,precent)
+    { 
+           if(precent)
+           document.getElementById("text_result_route").innerHTML+=("<span>"+typestr+"    "+addr+"   "+precent+"</span><br>");
+    }
+    
+    function buttonHover(){
+    var hoverTop = $(".coocaa_button_hover").offset().top;
+    var hoverLeft = $(".coocaa_button_hover").offset().left;
+    var hoverWidth = $(".coocaa_button_hover").width();
+    var hoverHeight = $(".coocaa_button_hover").height();
+    $(".button_hover").css({"width":hoverWidth+"px","height":hoverHeight+"px","top":hoverTop+"px","left":hoverLeft+"px"})
+
+    //根据history来添加聚焦的方框
+    $(".history").css("background","none");
+    $(".history").removeClass("history");
+    $(".coocaa_button_hover").addClass("history");
+    $(".coocaa_button_hover").css("background","linear-gradient(to right, rgba(0,101,179,.6) 0%, rgba(0,180,197,.6) 45%, rgba(186,221,206,.6) 100%)");
+    $(".coocaa_button_hover").removeAttr("readOnly");
+    $(".coocaa_button_hover").focus();
+    
+}
+</script>
+</html>

@@ -76,3 +76,14 @@ function buttonHover(){
     });
 }
 // $(".progress-bar").animate({width:"66.7%"},2500)
+
+$(document).ready(function(){
+	// $.get('set.php',function(data,status){
+	// 	console.log(data);
+	// 	var obj = $.parseJSON(data);
+		$("#ip").attr("value",sessionStorage.ip);
+		$("#gateway").attr("value",sessionStorage.gateway);
+		//alert($("#dns").attr("value"));
+		$("#dns").attr("value",sessionStorage.dns);
+	// })
+})

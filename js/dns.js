@@ -79,3 +79,76 @@ function buttonHover(){
     });
 }
 // $(".progress-bar").animate({width:"66.7%"},2500)
+
+//发送请求
+$("#next").on("itemClick",function(){
+	var dns = $("input[checked='checked']");
+	sessionStorage.dns = dns.next().next().text();
+	console.log(dns.next().next().text());
+	//$.get('set.php',{dns:dns.next().next().text()},function(data,status){});
+})
+$("#dns").on("keyup",function(ev){
+	var str = $("#dns").val();
+	var svg =/^[a-f0-9A-F:]$/;
+	var n=m=k=0;
+	if (ev.keyCode==8) {
+		var t=str.length-1;
+		//alert(str.charAt(t));
+		str=str.substring(0,str.length-1);
+		$("#dns").attr("value",str);
+	}
+	for(i=0;i<str.length;i++){
+		if (str.charAt(0)==":"){
+			$(".alert").css("display","block");
+			$(".alert >p").html("第一个字符不能为':'");
+			break;
+		}
+		if (str.length>39) {
+			$(".alert").css("display","block");
+			$(".alert >p").html("你输入长度过长");
+			break;
+		}else{
+			$(".alert").css("display","none");
+		}
+		var t = str.charAt(i);
+		if (!svg.test(t)) {
+			$(".alert").css("display","block");
+			$(".alert >p").html("你输入字符不合法，请使用十六进制数");
+		}
+		if (str.charAt(i)==":") {
+			n = i;
+			var ss=str.substring(m,n);
+			var f=str.indexOf(":");
+			//alert(ss.indexOf("0"));
+			if (n!=f) {
+				if (ss.indexOf("0")== 1) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("冒号之间头次出现非零数前的零可省略");
+				}
+			}
+			
+			if (n-m>5) {
+				$(".alert").css("display","block");
+				$(".alert >p").html("你输入冒号之间超过4位数");
+			}else if (n-m==1) {
+				k++;
+			}
+			if (k>1) {
+				$(".alert").css("display","block");
+				$(".alert >p").html("输入错误，不能再次使用'::'");
+			}
+			if (n==f) {
+				if (ss.indexOf("0")== 0) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("冒号之间头次出现非零数前的零可省略");
+				}
+				if (n-m>4) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("你输入冒号之间超过4位数");
+				}
+			}
+			m = n;		
+		}
+	}
+})
+

@@ -9,6 +9,7 @@
 	<link href="../style/ip.css" rel="stylesheet">
 	<!-- 共有的css文件 -->
 	<link rel="stylesheet" type="text/css" href="../style/common.css">
+	<link href="http://cdn.bootcss.com/material-design-icons/2.2.3/iconfont/material-icons.css" rel="stylesheet">
 	<!-- 引入的js库 -->
 	<script src="../lib/jquery.min.js"></script>
 	<script src="../lib/coocaamap-1.1.js"></script>
@@ -63,11 +64,15 @@
 						<p>设置你的IP地址</p>
 					</div>
 					
-					<input type="text" class="coocaa_button cck"></input>
-					<div class="tip">地址示例：2001:0db8:0000:0000:1319:8a2e:0370:7344
-					<p>2001:0db8::1319:8a2e:0370:7344</p>
+					<input type="text" class="coocaa_button cck" id="ip"></input>
+					<div class="tip">地址示例:AD80:0000:0000:0000:ABAA:0000:00C2:0002
+					<p>或AD80::ABAA:0:C2:2
+</p>
 					</div>
-					<div class="btn-primary cck coocaa_button" url="gateway.html" href="settingindex.html">
+					<div class="btn-primary cck coocaa_button" id="before" url="ip.html">
+				    	<p>上一步</p>
+				    </div>
+					<div class="btn-primary cck coocaa_button" id="next" url="gateway.html" href="settingindex.html">
 				    	<!-- <div id="floatingBarsG">
 				    		<div class="blockG" id="rotateG_01"></div>
 				    		<div class="blockG" id="rotateG_02"></div>
@@ -78,8 +83,10 @@
 				    		<div class="blockG" id="rotateG_07"></div>
 				    		<div class="blockG" id="rotateG_08"></div>
 				    	</div> -->
-				    	<p>保存</p>
+				    	<p>下一步</p>
 				    </div>
+				    
+				    <div class="alert alert-warning"><i class="material-icons">sentiment_dissatisfied</i><p>冒号之间头次出现非零数前的零可省略</p></div>
 				</div>
 			</div>
 		</div>
@@ -91,5 +98,6 @@
 	<script type="text/javascript" src="../js/cookie.js"></script>
 	<script src="../js/ip.js"></script>
 	<script src="../js/init-1.js"></script>
+	
 	</body>
 </html>

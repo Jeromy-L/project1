@@ -5,8 +5,8 @@ $("body").css("width",window.screen.width);
 $("#floatingBarsG").css("visibility","hidden");
 
 //获取屏幕的宽度和高度并设置在内容上
-var warpperWidth = window.screen.width;
-var warpperHeight = window.screen.height;
+var warpperWidth = 1920;
+var warpperHeight = 1080;
 $(".warpper").css("width",warpperWidth);
 $(".warpper").css("height",warpperHeight);
 $(".content").css("width",warpperWidth);
@@ -18,7 +18,7 @@ $(".back").css("height",warpperHeight);
 //再获取它的位置大小并设置在.button_hover样式上，移除只读属性并聚焦。
 function buttonHover(){
 	var hoverTop = $(".coocaa_button_hover").offset().top;
-	var hoverLeft = $(".coocaa_button_hover").offset().left-1;
+	var hoverLeft = $(".coocaa_button_hover").offset().left;
 	var hoverWidth = $(".coocaa_button_hover").width();
 	var hoverHeight = $(".coocaa_button_hover").height();
 	$(".button_hover").css({"width":hoverWidth+"px","height":hoverHeight+"px","top":hoverTop+"px","left":hoverLeft+"px"});
@@ -30,8 +30,15 @@ function buttonHover(){
 	$(".history").removeClass("history");
 	$(".coocaa_button_hover").addClass("history");
 	$(".coocaa_button_hover").css("background","linear-gradient(to right, rgba(0,101,179,.6) 0%, rgba(0,180,197,.6) 45%, rgba(186,221,206,.6) 100%)");
-	if(hoverTop == $(".btn-primary").offset().top){
+	if(hoverTop == $("#next").offset().top){
 		$(".btn-primary").css("color","#fff");
+		// alert(hoverLeft);
+		// alert($("#next").offset().left);
+		if ($("#next").offset().left!=hoverLeft) {
+			$("#next").css("color","#009491");
+		}else{
+			$("#before").css("color","#009491");
+		}
 	}else{
 		$(".btn-primary").css("color","#009491");
 	} 		
@@ -45,7 +52,21 @@ $("#floatingBarsG").css("visibility","hidden");
 //如果是向导模式则guide为true
 if(!getCookie("guide")){	
 	$(".ui-step").css("visibility","hidden");
+	$("#next").css({"left":"10%","width":"80%"});
+	$("#next p").html("保存");
+	$("#before").css("display","none");
+	//$("#next").css()
 }
+
+//发送请求
+$("#next").on("itemClick",function(){
+	sessionStorage.gateway = $("#gateway").val();
+	// $.get('set.php',{gate:$("#gateway").val()},function(data,status){
+	// 	console.log(data);
+	// });
+})
+
+
 $(".cck").on("itemClick", function () {
 	$("#floatingBarsG").css("visibility","visible");
 	if(getCookie("guide")){
@@ -71,3 +92,69 @@ $(".cck").on("itemClick", function () {
 	// 	}
 	// },"800")
 });
+
+// var svg =/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/;
+$("#gateway").on("keyup",function(ev){
+	var str = $("#gateway").val();
+	var svg =/^[a-f0-9A-F:]$/;
+	var n=m=k=0;
+	if (ev.keyCode==8) {
+		var t=str.length-1;
+		//alert(str.charAt(t));
+		str=str.substring(0,str.length-1);
+		$("#gateway").attr("value",str);
+	}
+	for(i=0;i<str.length;i++){
+		if (str.charAt(0)==":"){
+			$(".alert").css("display","block");
+			$(".alert >p").html("第一个字符不能为':'");
+			break;
+		}
+		if (str.length>39) {
+			$(".alert").css("display","block");
+			$(".alert >p").html("你输入长度过长");
+			break;
+		}else{
+			$(".alert").css("display","none");
+		}
+		var t = str.charAt(i);
+		if (!svg.test(t)) {
+			$(".alert").css("display","block");
+			$(".alert >p").html("你输入字符不合法，请使用十六进制数");
+		}
+		if (str.charAt(i)==":") {
+			n = i;
+			var ss=str.substring(m,n);
+			var f=str.indexOf(":");
+			//alert(ss.indexOf("0"));
+			if (n!=f) {
+				if (ss.indexOf("0")== 1) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("冒号之间头次出现非零数前的零可省略");
+				}
+			}
+			
+			if (n-m>5) {
+				$(".alert").css("display","block");
+				$(".alert >p").html("你输入冒号之间超过4位数");
+			}else if (n-m==1) {
+				k++;
+			}
+			if (k>1) {
+				$(".alert").css("display","block");
+				$(".alert >p").html("输入错误，不能再次使用'::'");
+			}
+			if (n==f) {
+				if (ss.indexOf("0")== 0) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("冒号之间头次出现非零数前的零可省略");
+				}
+				if (n-m>4) {
+					$(".alert").css("display","block");
+					$(".alert >p").html("你输入冒号之间超过4位数");
+				}
+			}
+			m = n;		
+		}
+	}
+})
